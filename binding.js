@@ -7,7 +7,7 @@ var username = document.getElementById("username");
 // parentn值家长的input
 var parentn = document.getElementById("parentname");
 // console.log(mobile_code);
-var sendphone='18839533791,13939489984'
+var sendphone=''
 // check()为form表单进行校验，学籍号和手机号没有输入时不可以进行提交的
 function check() {
     // username,usernameMsg 为学生学籍号的input的值
@@ -59,7 +59,7 @@ function check() {
         codeMsg.innerText = "";
     }
     if (checkbox!=true) {
-        alert('请先同意用户协议');
+        alert('请先阅读并同意《用户协议》');
         isPass = false;
     }
     return isPass;
@@ -72,7 +72,7 @@ function checkUserName(uesrname) {
         usernameMsg.innerText = "学籍号长度必须是19位";
     } else {
         usernameMsg.innerText = "";
-        
+        sendphone='18839533791,18876549908'
         // $.ajax({
         //     type: "POST",
         //     dataType: "json",
@@ -123,10 +123,13 @@ function isName(parentname) {
 function Phonenumber(phones) {
     var pnumberMsg = document.getElementById('pnumberMsg');
     // var length = phones.value.length;
-    var phones = phones.value;
-    console.log(phones);
+   var strArr = sendphone.split(",");
+   console.log(strArr);
+    var phone = phones.value;
+    console.log(strArr);
     console.log(sendphone);
-    if (!(/^1(3|4|5|7|8)\d{9}$/.test(phones))) {
+    for (let i = 0; i<strArr.length; i++) {
+    if (phone!=strArr[i]) {
         pnumberMsg.innerText = "请输入有效手机号";
         // return false;
     } else {
@@ -149,6 +152,8 @@ function Phonenumber(phones) {
         // });
 
         flag = true;
+        break;
+    }
     }
 }
 // 以下是发送验证码的功能
