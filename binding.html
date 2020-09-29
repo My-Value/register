@@ -5,64 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>认证学生</title>
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="binding.css">
+    <link rel="stylesheet" href="/public/static/css/common.css">
+    <link rel="stylesheet" href="/public/static/css/binding.css">
 
 </head>
 
 <body>
     <div class="wrap">
         <div class="logo">
-            <img src="newbinding-logo.png" alt="">
+            <img src="/public/static/img3/newbinding-logo.png" alt="">
         </div>
 
         <div class="topbar">
             <div class="content">
                 <form action="../index1.html" method="POST" onsubmit="return check()">
                     <div class="input-wrap">
-                        <label>
-                            <img src="new-start.png" alt="">
+                        <!-- <label>
+                            <img src="/public/static/img3/new-start.png" alt="">
                             学生学籍号：
-                        </label>
+                        </label> -->
                         <div class="msg-input">
                             <input type="text" placeholder="输入学生学籍号" type="text" value="G12345678909876543"
                                 id="username" onblur="checkUserName(this)">
-                            <img class="icon icon1-xh" src="studentnumber-icon.png" alt="">
+                            <img class="icon icon1-xh" src="/public/static/img3/studentnumber-icon.png" alt="">
                             <p class="red-msg frist" id="usernameMsg"></p>
                         </div>
                     </div>
 
                     <div class="input-wrap">
-                        <label class="parent">
-                            <img src="new-start.png" alt="">
+                        <!-- <label class="parent">
+                            <img src="/public/static/img3/new-start.png" alt="">
                             家长姓名：
-                        </label>
+                        </label> -->
                         <div class="msg-input">
                             <input type="text" placeholder="输入学生家长姓名" type="text" value="" id="parentname"
                                 onblur="isName(this)">
-                            <img class="icon icon2-uname" src="name-icon.png" alt="">
+                            <img class="icon icon2-uname" src="/public/static/img3/name-icon.png" alt="">
                             <p class="red-msg last" id="parentnameMsg"></p>
                         </div>
                     </div>
 
                     <div class="input-wrap">
-                        <label>
-                            <img src="new-start.png" alt="">
+                        <!-- <label>
+                            <img src="/public/static/img3/new-start.png" alt="">
                             填写手机号：
-                        </label>
+                        </label> -->
                         <div class="msg-input">
                             <input type="text" placeholder="输入您手机号" value="" name="mobile" id="phone-number"
                                 onblur="Phonenumber(this)">
-                            <img class="icon icon2-uname" src="phonenumber-icon.png" alt="">
+                            <img class="icon icon2-uname" src="/public/static/img3/phonenumber-icon.png" alt="">
                             <p class="red-msg second" id="pnumberMsg"></p>
                         </div>
                     </div>
 
                     <div class="input-wrap last-input">
-                        <label class="yzm">
-                            <img src="new-start.png" alt="">
+                        <!-- <label class="yzm">
+                            <img src="/public/static/img3/new-start.png" alt="">
                             验证码：
-                        </label>
+                        </label> -->
                         <div class="msg-input">
                             <input type="text" class="yzminput" placeholder="输入验证码" name="mobile_code" id="mobile_code">
                             <input type="button" id="btn" value="发送验证码" onclick="settime(this)">
@@ -72,19 +72,21 @@
 
 
                     <div class="input-wrap last-input footer">
+                        <!-- <div class="msg-input"> -->
                         <input class="checkbox" id="checkbox" type="checkbox" value="12" checked="true">
-                        <span>我已阅读并同意<a href="yhxy.html">《用户协议》</a></span>
-                        </div>
+                        <span>我已阅读并同意<a href="../view/yhxy.html">《用户协议》</a></span>
+                    <!-- </div> -->
                     </div>
-
-                    <div class="gitmsg">
-                        <input class="cz-btn" type="reset" value="重置">
-                        <input class="confrim-btn" type="submit" value="确定">
-                    </div>
-                </form>
             </div>
+
+            <div class="gitmsg">
+                <input class="cz-btn" type="reset" value="重置">
+                <input class="confrim-btn" type="submit" value="确定">
+            </div>
+            </form>
         </div>
-        <!-- <div class="confirm-usermsg">
+    </div>
+    <!-- <div class="confirm-usermsg">
             <div class="topbar-title">
                 <h3>请确认学生信息是否有误</h3>
             </div>
@@ -109,8 +111,8 @@
             </div>
         </div> -->
     </div>
-    <script src="jquery-3.5.1.js"></script>
-    <script src="binding.js"></script>
+    <script src="/public/static/js/jquery-3.5.1.js"></script>
+    <script src="/public/static/js/binding.js"></script>
 </body>
 
 </html>
